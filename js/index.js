@@ -157,6 +157,7 @@ function renderPrice() {
       if (state[element]) {
       let listElement = document.createElement("li");
       let elementContent = document.createTextNode(`$${ingredient.price} ${ingredient.name}`);
+      console.log("element :", element,"state[element]", state[element]);
       total += ingredient.price;
       listElement.appendChild(elementContent);
       ingredientList.appendChild(listElement);
@@ -168,6 +169,7 @@ function renderPrice() {
   totalContainer.textContent = `$${total}`;
   asideList.appendChild(ingredientList);
   asideList.appendChild(totalContainer);
+  total=basePrice;
   }
 
   renderEverything();
